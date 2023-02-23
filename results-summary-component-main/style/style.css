@@ -110,7 +110,7 @@ body {
 .content-right button {
   padding: 1.4rem;
   text-align: center;
-  border-radius: 8rem;
+  border-radius: 2rem;
   background-color: hsl(224, 30%, 27%);
   color: white;
   font-weight: 700;
