@@ -217,3 +217,23 @@ body {
   opacity: 0.6;
 }
 
+@media only screen and (max-width: 556px) {
+  .main {
+    display: block;
+  }
+  .content-left {
+    height: auto;
+  }
+
+  .left-info {
+    display: none;
+  }
+
+  .content-right {
+    align-items: center;
+  }
+
+  .content-right button {
+    width: 22rem;
+  }
+}
