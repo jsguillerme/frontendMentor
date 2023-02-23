@@ -11,7 +11,7 @@
 }
 
 body {
-  font-size: 1.6rem; 
+  font-size: 1.8rem; 
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
@@ -20,27 +20,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 85%);
+  background-color: white;
 }
 
 .main {
   display: flex;
-  background-color: aliceblue;
+  background-color: white;
   border-radius: 4rem;
+  
+  box-shadow: 2px 2px 100px 1px hsla(241, 25%, 57%, 0.411);
 }
 
 .content-left {
   text-align: center;
 
-  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  background: linear-gradient(hsla(252, 77%, 58%, 0.877), hsl(241, 81%, 54%));
   border-radius: 3rem;
 
   display: flex;
   flex-direction: column;
   gap: 4rem;
 
-  height: 45.5rem;
-  max-width: 32rem;
+  height: 44rem;
+  max-width: 30rem;
   padding: 4rem;
 }
 
@@ -56,7 +58,7 @@ body {
   height: 16rem;
   width: 16rem;
   box-shadow: 5px 5px 10px hsl(252, 55%, 45%) inset;
-  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  background: linear-gradient(rgba(78, 33, 202, 0.411), hsla(241, 72%, 46%, 0));
 
   display: flex;
   flex-direction: column;
@@ -72,15 +74,19 @@ body {
 
 .circle-points span {
   color: hsl(241, 100%, 89%);
-
+  font-size: 1.4rem;
+  opacity: 0.6;
 }
 
 .left-info h3{
   color: white;
-  font-size: 2.2rem
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
 .left-info p{
+  text-align: center;
+  font-size: 1.55rem;
   color: hsl(241, 100%, 89%);
 }
 
@@ -89,13 +95,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4rem;
+  gap: 3.5rem;
 
   border-radius: 0 2rem 2rem;
-  background-color: aliceblue;
 
   max-width: 34rem;
-  height: 45.5rem;
+  height: 44rem;
 
   padding: 3rem;
 }
@@ -110,10 +115,18 @@ body {
 .content-right button {
   padding: 1.4rem;
   text-align: center;
-  border-radius: 2rem;
+  border-radius: 4rem;
   background-color: hsl(224, 30%, 27%);
   color: white;
   font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.content-right button:hover {
+  cursor: pointer;  
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  transition: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .points-cards {
@@ -121,16 +134,17 @@ body {
   display: flex;
   flex-direction: column; 
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.6rem;
+  gap: 3rem;
 
   font-weight: 700;
+  font-size: 1.4rem;
 
   width: 100%;
   height: 3.4rem;
@@ -139,17 +153,67 @@ body {
 }
 
 .card1{
-  background-color: hsla(0, 100%, 67%, 0.20);
+  background-color: hsla(0, 100%, 67%, 0.1);
 }
 
+.card1 .summary-text-reaction {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: hsl(0, 100%, 67%);
+}
+
+.summary-note-reaction {
+  color: hsl(224, 30%, 27%);
+}
+
+.summary-note-reaction span:nth-child(2){
+  opacity: 0.6;
+}
+
+
 .card2{
-  background-color: hsla(39, 100%, 56%, 0.20);
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.card2 .summary-text-memory {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: hsl(39, 100%, 56%);
+}
+
+.summary-note-memory span:nth-child(2) {
+  opacity: 0.6;
 }
 
 .card3 {
-  background-color: hsla(166, 100%, 37%, 0.20);
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.card3 .summary-text-verbal {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: hsl(166, 100%, 37%)
+}
+
+.summary-note-verbal span:nth-child(2) {
+  opacity: 0.6;
 }
 
 .card4 {
-  background-color: hsla(234, 85%, 45%, 0.20);
+  background-color: hsla(234, 85%, 45%, 0.1);
 }
+
+.card4 .summary-text-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: hsl(234, 85%, 45%)
+}
+
+.summary-note-visual span:nth-child(2) {
+  opacity: 0.6;
+}
+
