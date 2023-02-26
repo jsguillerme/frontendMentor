@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -mox-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem; 
+  font-family: 'League Spartan', sans-serif;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  margin: 9rem 4rem;
+  width: 80vw;
+  height: 80vh;
+  background: hsl(222, 26%, 31%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* colocar gap aqui quando tiver mais coisas na calculadora*/
+  
+  padding: 6rem 2rem;
+}
+
+.calculator {
+  width: 45rem;
+  height: 65rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator .calc-top {
+  color: white;
+  width: 100%;
+
+  padding: 0 0.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calc-top > span {
+  font-weight: 700;
+}
+
+.change-theme {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.themes {
+  width: 4.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.text-themes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.actions-themes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  background: hsl(223, 31%, 20%);
+
+  border-radius: 6rem;
+  padding: 0.4rem;
+
+  width: 100%;
+  height: 1.5rem;
+}
+
+.actions-themes button {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+
+  background-color: hsl(6, 63%, 50%);
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notActive {
+  background-color: hsl(223, 31%, 20%) !important;
+}
+
+.calc-visor {
+  margin: 2rem;
+  padding-right: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  min-width: 45rem;
+  max-width: 100%;
+  height: 9rem;
+
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.calc-visor .previous {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin: 0.8rem;
+  padding: 0.4rem;
+  width: 90%;
+  border-bottom: 1px solid hsla(224, 32%, 25%, 0.767);
+}
+
+
+#previousValue, #operation{
+  font-size: 1.2rem;
+  color: hsl(222, 20%, 51%);
+}
+
+.calc-visor .current {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.calc-visor .currentValue {
+  padding: 0.6rem;
+}
+
+.calc-numbers {
+  width: 100%;
+  padding: 3rem;
+
+  border-radius: 1rem;
+
+  background-color: hsl(223, 31%, 20%);
+  display: grid;
+  grid-template-areas: 
+   "btn7 btn8 btn9 btnDel"
+   "btn4 btn5 btn6 btnSum"
+   "btn1 btn2 btn3 btnSub"
+   "btnPoin btn0 btnBar btnMul"
+   "btnRes btnRes btnEq btnEq";
+   
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 8rem 8rem 8rem 8rem;
+}
+
+.calc-numbers button {
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 0.4rem 0.1rem hsl(28, 16%, 65%);
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: 'League Spartan', sans-serif;
+  
+  height: 5rem;
+
+  color: hsl(221, 14%, 31%);
+  margin: 0 0.8rem;
+}
+
+.btn7 {
+  grid-area: btn7;
+}
+
+.btn8 {
+  grid-area: btn8;
+}
+
+.btn9 {
+  grid-area: btn9;
+}
+
+.calc-numbers .btnDel {
+  grid-area: btnDel;
+  color: white;
+  background: hsl(225, 21%, 49%);
+  box-shadow: 0 0.4rem  0.1rem hsl(224, 28%, 35%);
+}
+
+.calc-numbers .btnDel:hover {
+  background: hsl(223, 36%, 73%);
+}
+
+.actionSelected {
+  background-color: hsl(29, 32%, 69%);
+  box-shadow: 0.1rem 0.4rem 1rem 0.4rem hsla(29, 30%, 55%, 0.685) inset !important;
+}
+
+.btnSum {
+  grid-area: btnSum;
+}
+
+.btn6 {
+  grid-area: btn6;
+}
+
+.btn5 {
+  grid-area: btn5;
+}
+
+.btn4 {
+  grid-area: btn4;
+}
+
+.btnSub {
+  grid-area: btnSub;
+}
+
+.btn3 {
+  grid-area: btn3;
+}
+
+.btn2 {
+  grid-area: btn2;
+}
+
+.btn1 {
+  grid-area: btn1;
+}
+
+.btnMul {
+  grid-area: btnMul;
+}
+
+.btnBar {
+  grid-area: btnBar;
+}
+
+.btn0 {
+  grid-area: btn0;
+}
+
+.btnPoin {
+  grid-area: btnPoin;
+}
+
+.calc-numbers .btnEq {
+  grid-area: btnEq;
+  font-size: 2rem;
+  color: white;
+  background: hsl(6, 63%, 50%);
+  box-shadow: 0 0.4rem  0.1rem hsl(6, 37%, 39%);
+}
+
+.calc-numbers .btnEq:hover {
+  background: hsl(6, 60%, 58%);
+}
+
+.calc-numbers .btnRes {
+  grid-area: btnRes;
+  font-size: 2rem;
+  color: white;
+  background: hsl(225, 21%, 49%);
+  box-shadow: 0 0.4rem  0.1rem hsl(224, 28%, 35%);
+}
+
+.calc-numbers .btnRes:hover {
+  background: hsl(223, 36%, 73%);
+}
+
+
+
